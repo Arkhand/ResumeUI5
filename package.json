@@ -1,0 +1,39 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@ui5/cli": "2.4.5",
+    "rimraf": "^3.0.2",
+    "ui5-middleware-livereload": "0.4.3",
+    "ui5-middleware-proxy-basicauth": "^0.0.6",
+    "ui5-middleware-servestatic": "^0.3.3",
+    "ui5-task-nwabap-deployer": "1.0.15",
+    "eslint": "7.10.0"
+  },
+  "scripts": {
+    "deploy": "npx nwabap upload",
+    "lint": "eslint webapp",
+    "start": "ui5 serve --open flpSandbox.html",
+    "startCDN": "ui5 serve --open test/flpSandboxCDN.html",
+    "build": "rimraf dist && ui5 build -a",
+    "test": "ui5 serve --open test/unit/unitTests.qunit.html"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-proxy-basicauth",
+      "ui5-middleware-servestatic",
+      "ui5-middleware-livereload",
+      "ui5-task-nwabap-deployer"
+    ]
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

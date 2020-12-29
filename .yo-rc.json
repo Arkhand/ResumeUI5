@@ -1,0 +1,11 @@
+{
+  "generator-app-fiori": {
+    "projectname": "resume",
+    "name_space": "daniel.musial",
+    "name_space_slash": "daniel/musial",
+    "isCDN": true,
+    "UI5Version": "1.78.11",
+    "ui5Path": "",
+    "ODataConf": {}
+  }
+}

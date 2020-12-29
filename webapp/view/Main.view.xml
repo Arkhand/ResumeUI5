@@ -1,0 +1,39 @@
+<mvc:View
+	controllerName="daniel.musial.resume.controller.Main"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic">
+
+	<semantic:SemanticPage
+		id="page"
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false"
+		showFooter="true">
+
+		<semantic:titleHeading>
+			<Title
+				text="{i18n>mainTitle}"
+				level="H2"/>
+		</semantic:titleHeading>
+
+		<semantic:content>
+            <Text text="add content here" />
+		</semantic:content>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" />
+		</semantic:sendEmailAction>
+
+
+		<semantic:messagesIndicator>
+			<semantic:MessagesIndicator visible="{=${message>/}.length > 0}" />
+		</semantic:messagesIndicator>
+
+	<semantic:footerCustomActions>
+			<Button text="CustomFooterBtn" press="onPress"/>
+			<OverflowToolbarButton icon="sap-icon://settings" text="Settings" press="onPress"/>
+		</semantic:footerCustomActions>
+
+	</semantic:SemanticPage>
+
+</mvc:View>
